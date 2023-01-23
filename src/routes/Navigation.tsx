@@ -27,10 +27,6 @@ export const Navigation = () => {
                   </li>
                   ))
                 }
-
-                
-                 
-                 
                 </ul>
             </nav>
 
@@ -52,6 +48,3 @@ export const Navigation = () => {
     </Suspense>
   )
 }
-
-              
-            
