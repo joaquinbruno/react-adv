@@ -31,7 +31,6 @@ export const Navigation = () => {
             </nav>
 
             <Routes>
-
               {
                 routes.map(route => (
                   <Route 
@@ -42,9 +41,9 @@ export const Navigation = () => {
               }
               <Route path="/*" element={<Navigate to={routes[0].to} replace /> }/>
             </Routes>
-              
         </div>
     </BrowserRouter>
     </Suspense>
   )
 }
+              
