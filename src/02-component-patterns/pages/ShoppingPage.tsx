@@ -23,7 +23,7 @@ export const ShoppingPage = () => {
 
                 <ProductCard product={ product }>
                     <ProductCard.Image />
-                    <ProductCard.Title title={ 'Hola Mundo' } />
+                    <ProductCard.Title  />
                     <ProductCard.Buttons  />
                 </ProductCard>
 
