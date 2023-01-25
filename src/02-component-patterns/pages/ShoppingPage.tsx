@@ -1,5 +1,5 @@
 import { ProductCard, ProductImage, ProductTitle, ProductButtons } from '../components';
-
+import '../styles/custom-styles.css'
 
 const product = {
     id: '1',
@@ -20,17 +20,54 @@ export const ShoppingPage = () => {
                 flexDirection: 'row',
                 flexWrap: 'wrap'
             }}>
-
-                <ProductCard product={ product }>
-                    <ProductCard.Image />
-                    <ProductCard.Title  />
-                    <ProductCard.Buttons  />
+                {/*Propiedades propias del componente*/}
+             `<ProductCard 
+                product={product}
+                className="bg-dark text-white"
+                >
+                    <ProductCard.Image className="custom-image" />
+                    <ProductCard.Title className="text-white text-bold" />
+                    <ProductCard.Buttons
+                        className="custom-buttons"  />
+                </ProductCard>`
+                
+                {/*Construye las propiedades dentro del componente*/ }
+                <ProductCard 
+                    product={ product }
+                    className="bg-dark text-white"
+                    
+                >
+                    <ProductImage
+                        className="custom-image"
+                         />
+                    <ProductTitle
+                        className="text-white text-bold"
+                        activeClass="active"
+                    />
+                    <ProductButtons className="custom-buttons" 
+                    />
                 </ProductCard>
-
-                <ProductCard product={ product }>
-                    <ProductImage />
-                    <ProductTitle />
-                    <ProductButtons />
+                {/* Desde las props de cada Componente que tiene su propia prop, le paso dentro de la interface un style 
+                    Luego dentro de la function del componente le paso como argumento junto a las otras props la del style
+                */}
+                <ProductCard 
+                    product={ product }
+                    style={{
+                        backgroundColor: '#70D1F8'
+                    }}
+                    
+                >
+                    <ProductImage
+                    style={{boxShadow: '10px 10px 10px rgba(0,0,0,0.2)'}}
+                        />
+                    <ProductTitle style={{fontWeight: 'bold',}}
+                    />
+                    <ProductButtons
+                        style={{
+                            display: 'flex',
+                            justifyContent: 'end',
+                        }}
+                    />
                 </ProductCard>
             </div>
         </div>
