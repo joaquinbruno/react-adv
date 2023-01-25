@@ -21,7 +21,7 @@ export const ShoppingPage = () => {
                 flexWrap: 'wrap'
             }}>
                 {/*Propiedades propias del componente*/}
-             `<ProductCard 
+                <ProductCard 
                 product={product}
                 className="bg-dark text-white"
                 >
@@ -29,7 +29,7 @@ export const ShoppingPage = () => {
                     <ProductCard.Title className="text-white text-bold" />
                     <ProductCard.Buttons
                         className="custom-buttons"  />
-                </ProductCard>`
+                </ProductCard>
                 
                 {/*Construye las propiedades dentro del componente*/ }
                 <ProductCard 
